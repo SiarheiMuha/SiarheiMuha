@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage("LS") {
-    sh "ls -ltrR4 /"
+    sh "ls -ltrR /"
   }
   stage('SonarQube Analysis') {
    def scannerHome = tool name: 'sonarqube_dev', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
